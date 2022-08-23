@@ -22,6 +22,157 @@
             <p>Hurry up, Select your favorite players.</p>
         </div>
     </header>
+    <!-- main -->
+    <main>
+        <section>
+            <div class="grid grid-rows-3 grid-flow-col gap-4 bg-zinc-800 text-white">
+                <div class="row-span-3 float-sm pt-5">
+                    <div class="grid grid-cols-3 gap-5 p-5 text-center">
+                        <!-- player1 -->
+                        <div>
+                            <div class=" card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Lionel Messi.jpg" alt="" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 id="" class="card-title">Lionel Messi</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button id="" class="btn btn-success "
+                                            onclick="this.disabled = true; addToCart(this);">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player2 -->
+                        <div>
+                            <div class="card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Neymar Jr.jpg" alt="Shoes" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Neymar Jr</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button class="btn btn-success"
+                                            onclick="this.disabled = true; addToCart(this);">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player3 -->
+                        <div>
+                            <div class="card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Kylian Mbappé.jpg" alt="Shoes" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Kylian Mbappé</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button class="btn btn-success"
+                                            onclick="this.disabled = true; addToCart(this);">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player4 -->
+                        <div>
+                            <div class="card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Vítor Machado.jpg" alt="Shoes" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Vítor Machado</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button class="btn btn-success"
+                                            onclick="this.disabled = true; addToCart(this);">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player5 -->
+                        <div>
+                            <div class="card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Sergio Ramos.jpg" alt="Shoes" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">LSergio Ramos</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button class="btn btn-success"
+                                            onclick="this.disabled = true; addToCart(this);">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- player6 -->
+                        <div>
+                            <div class="card card-compact w-64 bg-base-100 shadow-xl bg-black">
+                                <figure><img src="img/Renato Sanches.jpg" alt="Shoes" class="w-full h-40" /></figure>
+                                <div class="card-body">
+                                    <h2 class="card-title">Renato Sanches</h2>
+                                    <p>
+                                        36 Goals <span>.</span> 120 Assist
+                                    </p>
+                                    <div class="card-actions justify-end mt-4">
+                                        <button class="btn btn-success"
+                                            onclick="this.disabled = true; addToCart(this)">SELECT</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Selete Five -->
+                <div class="col-span-2 mt-24 w-72 h-72 p-3 bg-black text-white">
+                    <p class="text-4xl text-orange-600 text-center font-bold">Selected- <span id="total-products"
+                            class="text-blue-500"></span>
+                    </p>
+                    <div class="overflow-x-auto">
+                        <table class="table w-full text-white">
+                            <tbody id="player-cart">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Budget -->
+                <div class="row-span-2 w-72 h-3/5 bg-black">
+                    <div class="p-5 gap-4 text-center">
+                        <h1 class="text-4xl text-orange-600 font-bold">Budget</h1><br>
+                        <div class="input-group">
+                            <form>
+                                Per player <input class="w-28 p-1 border rounded-lg bg-black text-white" type="text"
+                                    id="firstNumber" /><br>
+                                <input class="form-control border-lime-900 mt-3 rounded bg-black text-white"
+                                    type="button" onClick="multiplyBy()" Value="Calculate" />
+                            </form>
+                        </div>
+                        <p class="mt-4">The Result is : $
+                            <span class="text-white" id="result"></span>
+                        </p>
+
+                        <div class="input-group mt-3">
+                            <form>
+                                Manager <input class="w-28 mt-3 p-1 border rounded-lg bg-black text-white" type="text"
+                                    id="managerNumber" /><br>
+                                Coach <input class="w-28 p-1 mt-3 border rounded-lg bg-black text-white" type="text"
+                                    id="coachNumber" /><br>
+                                <input class="form-control border-lime-900 mt-3 rounded bg-black text-white"
+                                    type="button" onClick="additionBy()" Value="Calculate Total" />
+
+                            </form>
+                        </div>
+                        <p class="mt-4">Total : $
+                            <span class="text-white" id="totalResult"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
